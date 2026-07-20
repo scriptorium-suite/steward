@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.11", "3.12", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          version: "0.11.16"
+      - run: uv python install '${{ matrix.python }}'
+      - run: uv sync --python '${{ matrix.python }}' --managed-python --locked --extra dev
+      - run: uv run --python '${{ matrix.python }}' --managed-python --no-sync python -m pytest -q
+      # smoke: the installed entry point actually runs
+      - run: uv run --python '${{ matrix.python }}' --managed-python --no-sync steward --version
+      - run: uv run --python '${{ matrix.python }}' --managed-python --no-sync steward status
+        env:
+          SCRIPTORIUM_CONFIG_DIR: ${{ runner.temp }}/scriptorium
+          ZOTERO_API_KEY: ""
+          ZOTERO_LIBRARY_ID: ""
+          ZOTERO_LIBRARY_TYPE: ""
+          ZOTERO_LOCAL: ""

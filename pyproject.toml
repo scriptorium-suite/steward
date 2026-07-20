@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scriptorium-steward"
+version = "0.2.0"
+description = "Reference-library governance for Zotero: backup, audit, propose, review, apply, rollback - safe and auditable AI operations on your library"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Scriptorium Suite" }]
+keywords = ["zotero", "bibliography", "research", "library", "governance"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+]
+# Core is dependency-free by design (stdlib only).
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/scriptorium-suite/steward"
+Specification = "https://github.com/scriptorium-suite/scriptorium-spec"
+
+[project.scripts]
+steward = "steward.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.uv]
+required-version = "==0.11.16"
+python-preference = "only-managed"

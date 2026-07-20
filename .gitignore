@@ -1,0 +1,59 @@
+# Python and build outputs
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.venv/
+
+# Local agent and editor state
+.claude/
+.codex/
+.agents/
+.idea/
+.vscode/
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+config.toml
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+*credentials*.json
+*secrets*.json
+
+# Private Zotero and research material
+data/
+backups/
+journals/
+proposals/
+tag-plans/
+kb/
+handoffs/
+parsed/
+reading-notes/
+Reviews/
+vault/
+storage/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.bib
+*.ris
+*.enw
+*.nbib
+*.pdf
+*.zip
+
+# Runtime residue
+*.log
+*.bak
+*.tmp
