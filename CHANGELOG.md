@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.0 — Unreleased
+## 0.2.0 — 2026-07-20
 
 - Moved the three audited product Skills from the agent-host-specific `.claude/skills/` path to the neutral `skills/` directory; public release candidates no longer carry `.claude/` governance state.
 - Replaced potentially identifying bibliographic and research-domain fixtures with explicitly labelled `[SYNTHETIC] XQ-17` data.
