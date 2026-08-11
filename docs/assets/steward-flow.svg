@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-labelledby="title desc">
+  <title id="title">Steward literature workflow</title>
+  <desc id="desc">Steward turns a reference library into safe, reviewable reading notes, proposals, reviews, and handoffs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#1c1917"/><stop offset="1" stop-color="#431407"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#fb923c"/></marker>
+    <style>.title{font:700 42px ui-sans-serif,system-ui;fill:#fff7ed}.sub{font:500 19px ui-sans-serif,system-ui;fill:#fed7aa}.box{fill:#111827;stroke:#7c2d12;stroke-width:1.5;rx:24}.label{font:700 21px ui-sans-serif,system-ui;fill:#ffedd5}.body{font:500 15px ui-sans-serif,system-ui;fill:#e7e5e4}.small{font:600 13px ui-sans-serif,system-ui;fill:#fdba74}.arrow{stroke:#fb923c;stroke-width:4;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1280" height="560" fill="url(#bg)"/>
+  <text x="70" y="76" class="title">Steward</text><text x="70" y="110" class="sub">Reference-library governance for research workflows that need reviewable handoffs.</text>
+  <rect x="70" y="210" width="190" height="116" class="box"/><text x="102" y="254" class="label">Library</text><text x="102" y="286" class="body">Zotero or local files</text>
+  <rect x="330" y="210" width="190" height="116" class="box"/><text x="362" y="254" class="label">Parse</text><text x="362" y="286" class="body">metadata, text, notes</text>
+  <rect x="590" y="210" width="190" height="116" class="box"/><text x="622" y="254" class="label">Read</text><text x="622" y="286" class="body">reading notes, reviews</text>
+  <rect x="850" y="210" width="190" height="116" class="box"/><text x="882" y="254" class="label">Synthesize</text><text x="882" y="286" class="body">directions, gaps</text>
+  <rect x="1090" y="210" width="120" height="116" class="box"/><text x="1118" y="254" class="label">Hand off</text><text x="1118" y="286" class="body">to suite</text>
+  <path d="M260 268 L330 268" class="arrow"/><path d="M520 268 L590 268" class="arrow"/><path d="M780 268 L850 268" class="arrow"/><path d="M1040 268 L1090 268" class="arrow"/>
+  <text x="70" y="446" class="body">Safety model: preview first, review drafts, keep backups, and exchange Scriptorium Spec files.</text>
+  <text x="70" y="480" class="small">Steward can be used alone, or as the literature component inside the Scriptorium suite.</text>
+</svg>
